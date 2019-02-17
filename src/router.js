@@ -2,13 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Books from './views/Books'
+import Book from './views/Book'
 import Words from './views/Words'
 import Signin from './views/Signin'
 import Signup from './views/Signup'
 import Profile from './views/Profile'
 import Store from './store'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -22,6 +23,12 @@ export default new Router({
         name: 'books',
         component: Books
     },
+      {
+          path: '/book:id',
+          name: 'book',
+          props: true,
+          component: Book
+      },
     {
         path: '/words',
         name: 'words',
